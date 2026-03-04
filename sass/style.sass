@@ -1,4 +1,73 @@
 *
-padding: 0
-margin:0
-box-sizing: border-box
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+$color-blue: #5290ea
+$color-orange: #F28B64
+$color-grey: #e2e2e2
+$backround-color: #f0f0f0
+
+.container
+    max-width: 1140px
+    margin: 0 auto
+
+.main-section
+    min-height: 800px
+    background-color: $backround-color
+    padding-top: 16px
+    &__logo
+        width: 152px
+    &__nav-container
+        display: flex
+        justify-content: space-between
+        align-items: center
+        height: 70px
+    &__content-container
+        display: flex
+
+.nav-menu
+    &__list
+        display: flex
+        gap: 64px
+    &__list-item
+        font-size: 18px
+        font-weight: 600
+        list-style-type: none
+    a
+        text-decoration: none
+
+.left-wrapper
+    position: relative
+    &__rectangle-blue
+        position: absolute
+        height: 220px
+        width: 630px
+        background-color: $color-blue
+        transform: rotate(-64deg)
+        top: 120px
+        left: -30px
+        border-radius: 100px
+    &__rectangle-orange
+        position: absolute
+        height: 220px
+        width: 630px
+        background-color: $color-orange
+        transform: rotate(-30deg)
+        top: 120px
+        left: -30px
+        border-radius: 100px
+    &__rectangle-grey
+        position: absolute
+        height: 220px
+        width: 630px
+        background-color: $color-grey
+        transform: rotate(-10deg)
+        top: 120px
+        left: -30px
+        border-radius: 100px
+        z-index: -7
+
+    &__img
+        z-index: 1
+        position: relative
