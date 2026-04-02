@@ -1,73 +1,187 @@
 *
-    padding: 0
-    margin: 0
-    box-sizing: border-box
+  padding: 0
+  margin: 0
+  box-sizing: border-box
 
-$color-blue: #5290ea
+$color-blue: #5290EA
 $color-orange: #F28B64
-$color-grey: #e2e2e2
-$backround-color: #f0f0f0
+$color-grey: #E2E2E2
+$background-color: #F0F0F0
+$box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
 
 .container
-    max-width: 1140px
-    margin: 0 auto
+  max-width: 1140px
+  margin: 0 auto
 
 .main-section
-    min-height: 800px
-    background-color: $backround-color
-    padding-top: 16px
-    &__logo
-        width: 152px
-    &__nav-container
-        display: flex
-        justify-content: space-between
-        align-items: center
-        height: 70px
-    &__content-container
-        display: flex
+  min-height: 800px
+  background-color: $background-color
+  padding-top: 16px
+  overflow: hidden
+  position: relative
+  &__logo
+    width: 152px
+  &__nav-container
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 70px
+  &__content-container
+    display: flex
+    position: relative
+  &__first-ring
+    position: absolute
+    top: 120px
+    right: 0
+  &__second-ring
+    position: absolute
+    bottom: -100px
+    right: -70px
 
 .nav-menu
-    &__list
-        display: flex
-        gap: 64px
-    &__list-item
-        font-size: 18px
-        font-weight: 600
-        list-style-type: none
+  &__list
+    display: flex
+    gap: 64px
+  &__list-item
+    font-size: 18px
+    font-weight: 600
+    list-style-type: none
     a
-        text-decoration: none
+      text-decoration: none
 
 .left-wrapper
+  position: relative
+  &__rectangle-blue
+    position: absolute
+    height: 220px
+    width: 560px
+    background-color: $color-blue
+    transform: rotate(-64deg)
+    top: 140px
+    left: -50px
+    border-radius: 100px
+    box-shadow: $box-shadow
+  &__rectangle-orange
+    position: absolute
+    height: 220px
+    width: 620px
+    background-color: $color-orange
+    transform: rotate(-51deg)
+    top: 160px
+    left: -34px
+    border-radius: 100px
+    box-shadow: $box-shadow
+  &__rectangle-grey
+    position: absolute
+    height: 220px
+    width: 610px
+    background-color: $color-grey
+    transform: rotate(-36deg)
+    top: 195px
+    left: 15px
+    border-radius: 100px
+    box-shadow: $box-shadow
+  &__img
     position: relative
-    &__rectangle-blue
-        position: absolute
-        height: 220px
-        width: 630px
-        background-color: $color-blue
-        transform: rotate(-64deg)
-        top: 120px
-        left: -30px
-        border-radius: 100px
-    &__rectangle-orange
-        position: absolute
-        height: 220px
-        width: 630px
-        background-color: $color-orange
-        transform: rotate(-30deg)
-        top: 120px
-        left: -30px
-        border-radius: 100px
-    &__rectangle-grey
-        position: absolute
-        height: 220px
-        width: 630px
-        background-color: $color-grey
-        transform: rotate(-10deg)
-        top: 120px
-        left: -30px
-        border-radius: 100px
-        z-index: -7
+    width: 880px
 
-    &__img
-        z-index: 1
-        position: relative
+.icons
+  display: flex
+  gap: 17px
+  &__item
+    height: 40px
+    width: 40px
+    border: 1px solid $color-blue
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: pointer
+  &__item:hover
+    box-shadow: $box-shadow
+
+  i
+    font-size: 21px
+
+.title
+  font-size: 72px
+  font-weight: 700
+
+.right-wrapper
+  position: absolute
+  width: 320px
+  right: 70px
+  top: 125px
+  &__text
+    font-size: 16px
+    margin-bottom: 20px
+  &__first-ring
+    position: absolute
+    top: 120px
+    right: 0
+
+.buttons
+  display: flex
+  &__main-btn
+    height: 60px
+    width: 200px
+    color: white
+    font-size: 18px
+    font-weight: 700
+    background-color: $color-orange
+    border: none
+    border-radius: 100px
+    box-shadow: $box-shadow
+    cursor: pointer
+    margin-right: 30px
+    &:hover
+      background-color: #ef7b51
+  &__icon-btn
+    display: flex
+    align-items: center
+    img
+      margin-right: 15px
+      cursor: pointer
+      transition: .3s all
+      &:hover
+        transform: scale(110%)
+  &__text
+    font-size: 16px
+
+.ring
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 194px
+  width: 194px
+  border-radius: 50%
+  background-image: linear-gradient(144deg, #ed7a508a 0%, #4889ea89 54%, #2c2c2c82 100%)
+  &::before
+    display: block
+    content: ""
+    height: 130px
+    width: 130px
+    background-color: $background-color
+    border-radius: 50%
+  &_big
+    height: 285px
+    width: 285px
+    &::before
+      height: 190px
+      width: 190px
+
+.section-courses
+  min-height: 700px
+  position: relative
+  overflow: hidden
+  &__container
+    padding-top: 30px
+  &__title
+    padding-bottom: 40px
+  &__cards-box
+    display: flex
+    gap: 30px
+  &__icons-box
+    display: flex 
+    gap: 50px
+ 
